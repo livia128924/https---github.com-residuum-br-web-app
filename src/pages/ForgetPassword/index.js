@@ -10,18 +10,17 @@ import background from "../../assets/bg-tela-login 1.png";
 import { Form, Container, Card } from "./styles";
 import styles from "../../styles/components/Button.module.css";
 
-class SignIn extends Component {
+class ForgetPassword extends Component {
   componentDidMount() {
     document.title = "Entrar | Residuum";
   }
 
   state = {
     email: "",
-    password: "",
     error: "",
   };
 
-  handleSignIn = async (e) => {
+  handleForgetPassword = async (e) => {
     e.preventDefault();
 
     const { email, password } = this.state;
@@ -45,7 +44,7 @@ class SignIn extends Component {
   render() {
     return (
       <Container>
-        <Form onSubmit={this.handleSignIn} className="drop-shadow">
+        <Form onSubmit={this.handleForgetPassword} className="drop-shadow">
           <Card>
             <div
               style={{
@@ -64,7 +63,19 @@ class SignIn extends Component {
                marginBottom:24,
               }}
             >
-              <a>FAÇA SEU LOGIN</a>
+              <a>ESQUECI MINHA SENHA</a>
+            </div>
+            <div
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                display: "flex",
+                marginLeft: 44,
+                marginRight: 33,
+                marginBottom: 20,
+              }}
+            >
+              <a>Para redefinir sua senha, informe seu e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.</a>
             </div>
             {this.state.error && <p>{this.state.error}</p>}
 
@@ -77,23 +88,11 @@ class SignIn extends Component {
             >
               <input
                 type="email"
-                placeholder="E-mail"
+                placeholder="Usuario ou email"
                 onChange={(e) => this.setState({ email: e.target.value })}
               />
             </div>
-            <div
-              style={{
-                justifyContent: "center",
-                alignItems: "center",
-                display: "flex",
-              }}
-            >
-              <input
-                type="password"
-                placeholder="Senha"
-                onChange={(e) => this.setState({ password: e.target.value })}
-              />
-            </div>
+
             <div
               style={{
                 justifyContent: "center",
@@ -107,7 +106,7 @@ class SignIn extends Component {
             <div >
             <div style={{justifyContent:'center', alignItems:'center', display:'flex'}}>
             <Link
-              to="/forgetPassword"
+              to="/login"
               style={{
                 fontSize: 12,
                 fontFamily: "Montserrat",
@@ -115,22 +114,10 @@ class SignIn extends Component {
                 fontWeight: "normal",
               }}
             >
-              Esqueceu sua senha
+             Cancelar {">"}
             </Link>
             </div>
-            <div style={{justifyContent:'center', alignItems:'center',  display:'flex'}}>
-              <Link
-                to=""
-                style={{
-                  fontSize: 12,
-                  fontFamily: "Montserrat",
-                  fontStyle: "normal",
-                  fontWeight: "bold",
-                }}
-              >
-                Ainda não sou cliente
-              </Link>
-            </div>
+
 </div>
           </Card>
         </Form>
@@ -164,4 +151,4 @@ class SignIn extends Component {
   }
 }
 
-export default withRouter(SignIn);
+export default withRouter(ForgetPassword);

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Cadastro_PoloDigital from "./pages/Cadastro_PoloDigital";
+import ForgetPassword from "./pages/ForgetPassword";
 import FomStep1 from "./pages/Registration/FormStep1";
 import FormStep2 from "./pages/Registration/FormStep2";
 import FormStep3 from "./pages/Registration/FormStep3";
@@ -34,6 +35,7 @@ const Routes = () => (
       <Route path="/login" component={SignIn} />
       <Route path="/signup" component={SignUp} />
       <Route path="/cadastro" component={Cadastro_PoloDigital} />
+      <Route path="/forgetPassword" component={ForgetPassword} />
 
       <Route path="/step1" component={FormStep2} />
       {/* <Route path="/step2" component={FormStep2} />

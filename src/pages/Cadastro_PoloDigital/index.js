@@ -214,6 +214,51 @@ class CadastroPolo extends Component {
                   />
                 </div>
               </Form>
+
+
+              {/* <div>
+            <FormControl component="fieldset">
+              <FormLabel
+                component="legend"
+                style={{
+                  fontSize: 14,
+                  fontFamily: "Montserrat",
+                  fontStyle: "normal",
+                  fontWeight: "normal",
+                  color: "#86868D",
+                }}
+                >
+                Selecione seu perfil
+              </FormLabel>
+              <RadioGroup
+                row
+                aria-label="perfil"
+                name="row-radio-buttons-group"
+              >
+                <FormControlLabel
+                  value="condominio"
+                  control={<Radio color="primary" />}
+                  label="Condominio"
+                />
+                <FormControlLabel
+                  value="atacarejo"
+                  control={<Radio color="primary" />}
+                  label="Atacarejo"
+                />
+                <FormControlLabel
+                  value="industria"
+                  control={<Radio color="primary" />}
+                  label="Industria"
+                  />
+                <FormControlLabel
+                  value="governo"
+                  control={<Radio color="primary" />}
+                  label="Governo"
+                  />
+              </RadioGroup>
+            </FormControl>
+          </div> */}
+
             </div>
 
             <hr style={{ width: 733 }} />

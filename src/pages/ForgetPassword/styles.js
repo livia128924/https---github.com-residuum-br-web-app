@@ -11,10 +11,10 @@ export const Container = styled.div`
 export const Card = styled.div`
 position: absolute;
 width: 390px;
-height: auto;
+height: 445px;
 left: 503px;
 top: 130px;
-padding-bottom: 20px;
+
 background: #FFFFFF;
 border: 0.5px solid rgba(88, 92, 94, 0.1);
 box-sizing: border-box;
